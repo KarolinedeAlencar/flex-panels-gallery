@@ -1,96 +1,103 @@
 html {
   box-sizing: border-box;
-  background:#ffc600;
-  font-family:'helvetica neue';
+  max-height: 100vh;
+  font-family: 'Amatic SC', cursive;
   font-size: 20px;
-  font-weight: 200;
+  text-transform: uppercase;
 }
 
 body {
   margin: 0;
+  border-bottom: 12px solid black;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
+header {
+  text-align: center;
+}
+
+.title {
+  margin-top: .6em;
+  margin-bottom: .6em;
+  font-size: 4em;
+}
+
 .panels {
-  min-height: 100vh;
-  overflow: hidden;
+  height: 78vh;
+  flex: 1;
   display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .panel {
-  background:#6B0F9C;
-  box-shadow:inset 0 0 0 5px rgba(255,255,255,0.1);
-  color:white;
+  cursor: pointer;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
   text-align: center;
-  align-items:center;
-  /* Safari transitionend event.propertyName === flex */
-  /* Chrome + FF transitionend event.propertyName === flex-grow */
+  background-size:cover;
+  background-position:center;
   transition:
     font-size 1s cubic-bezier(0.61,-0.19, 0.7,-0.11),
     flex 1s cubic-bezier(0.61,-0.19, 0.7,-0.11),
     background 0.8s;
-  font-size: 20px;
-  background-size:cover;
-  background-position:center;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
 }
 
-div:hover {
+.panel:hover {
   flex: 5;
-  font-size:40px;
+  font-size: 2em;
 }
 
-.panel1 { background-image:url(https://video-images.vice.com/_uncategorized/1489677157333-BLACKPINK_PUB4_credit_YG-ENTERTAINMENT.jpeg); }
-.panel2 { background-image:url(http://cdn.koreaboo.com/wp-content/uploads/2016/08/14138079_284528275261937_3171122797956186523_o.jpg); }
-.panel3 { background-image:url(https://2.bp.blogspot.com/-C9Td8UqT9M8/WAlX9BCiy7I/AAAAAAAAAjM/1DOTNdyDcv4NflRlmjwt6P2XWcF4K5nBACLcB/s1600/Cu92MAPVMAAysOM.jpg); }
-.panel4 { background-image:url(https://video-images.vice.com/_uncategorized/1489677142863-BLACKPINK_PUB5_credit_YG-ENTERTAINMENT.jpeg); }
-.panel5 { background-image:url(http://www.yg-life.com/wp-content/uploads/2016/06/f8de80f1b228e40fbf2d7247ceae8cd5.jpg); }
+.panel__title {
+  font-size: 3em;
+}
+
+.panel__desc {
+  font-size: 1em;
+}
+
+.panel1 { background-image:url(https://happyvelvets.files.wordpress.com/2015/03/icecreamcakeirene2.jpg?w=1040); }
+.panel2 { background-image:url(https://happyvelvets.files.wordpress.com/2015/03/icecreamcakeseulgi1.jpg?w=1040); }
+.panel3 { background-image:url(https://happyvelvets.files.wordpress.com/2015/03/icecreamcakewendy1.jpg?w=1040); }
+.panel4 { background-image:url(https://happyvelvets.files.wordpress.com/2015/03/icecreamcakejoy1.jpg?w=1040); }
+.panel5 { background-image:url(https://happyvelvets.files.wordpress.com/2015/03/icecreamcakeyeri1.jpg?w=1040); }
 
 .panel > * {
-  margin:0;
   width: 100%;
-  transition: transform 0.8s;
-  flex: 1 0 auto;
+
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  margin: 0;
 
-.panel > *:first-child {
-  transform: translateY(-100%);
-}
-
-.panel:hover > *:first-child {
-  transform: translateY(0);
+  transition: transform .8s;
 }
 
 .panel:hover > *:last-child {
-  transform: translateY(0);
+  display: block;
 }
 
 .panel > *:last-child {
-  transform: translateY(100%);
+  display: none;
 }
 
-.panel p {
-  text-transform: uppercase;
-  font-family: 'Amatic SC', cursive;
-  text-shadow:0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
-  font-size: 2em;
-}
-.panel p:nth-child(2) {
-  font-size: 4em;
-}
 
-.panel.open {
-  flex: 5;
-  font-size:40px;
+@media (max-width: 641px) {
+
+  html {
+    font-size: 14px;
+  }
+
+  .panels {
+    flex-direction: column;
+  }
+
 }
