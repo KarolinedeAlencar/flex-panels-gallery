@@ -29,9 +29,9 @@ body {
   /* Safari transitionend event.propertyName === flex */
   /* Chrome + FF transitionend event.propertyName === flex-grow */
   transition:
-    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
-    flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
-    background 0.2s;
+    font-size 1s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    flex 1s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    background 0.8s;
   font-size: 20px;
   background-size:cover;
   background-position:center;
@@ -40,19 +40,24 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
+div:hover {
+  flex: 5;
+  font-size:40px;
+}
 
-.panel1 { background-image:url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500); }
-.panel2 { background-image:url(https://source.unsplash.com/1CD3fd8kHnE/1500x1500); }
-.panel3 { background-image:url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d); }
-.panel4 { background-image:url(https://source.unsplash.com/ITjiVXcwVng/1500x1500); }
-.panel5 { background-image:url(https://source.unsplash.com/3MNzGlQM7qs/1500x1500); }
+.panel1 { background-image:url(https://video-images.vice.com/_uncategorized/1489677157333-BLACKPINK_PUB4_credit_YG-ENTERTAINMENT.jpeg); }
+.panel2 { background-image:url(http://cdn.koreaboo.com/wp-content/uploads/2016/08/14138079_284528275261937_3171122797956186523_o.jpg); }
+.panel3 { background-image:url(https://2.bp.blogspot.com/-C9Td8UqT9M8/WAlX9BCiy7I/AAAAAAAAAjM/1DOTNdyDcv4NflRlmjwt6P2XWcF4K5nBACLcB/s1600/Cu92MAPVMAAysOM.jpg); }
+.panel4 { background-image:url(https://video-images.vice.com/_uncategorized/1489677142863-BLACKPINK_PUB5_credit_YG-ENTERTAINMENT.jpeg); }
+.panel5 { background-image:url(http://www.yg-life.com/wp-content/uploads/2016/06/f8de80f1b228e40fbf2d7247ceae8cd5.jpg); }
 
 .panel > * {
   margin:0;
   width: 100%;
-  transition:transform 0.5s;
+  transition: transform 0.8s;
   flex: 1 0 auto;
   display: flex;
   justify-content: center;
@@ -63,11 +68,11 @@ body {
   transform: translateY(-100%);
 }
 
-.panel.open-active > *:first-child {
+.panel:hover > *:first-child {
   transform: translateY(0);
 }
 
-.panel.open-active > *:last-child {
+.panel:hover > *:last-child {
   transform: translateY(0);
 }
 
