@@ -64,11 +64,11 @@ header {
   font-size: 1em;
 }
 
-.panel1 { background-image:url(https://happyvelvets.files.wordpress.com/2015/03/icecreamcakeirene2.jpg?w=1040); }
-.panel2 { background-image:url(https://happyvelvets.files.wordpress.com/2015/03/icecreamcakeseulgi1.jpg?w=1040); }
-.panel3 { background-image:url(https://happyvelvets.files.wordpress.com/2015/03/icecreamcakewendy1.jpg?w=1040); }
-.panel4 { background-image:url(https://happyvelvets.files.wordpress.com/2015/03/icecreamcakejoy1.jpg?w=1040); }
-.panel5 { background-image:url(https://happyvelvets.files.wordpress.com/2015/03/icecreamcakeyeri1.jpg?w=1040); }
+.panel1 { background-image:url(../img/irene.jpg); }
+.panel2 { background-image:url(../img/seulgi.jpg); }
+.panel3 { background-image:url(../img/wendy.jpg); }
+.panel4 { background-image:url(../img/joy.jpg); }
+.panel5 { background-image:url(../img/yeri.jpg); }
 
 .panel > * {
   width: 100%;
